@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cubic_11.ttf">
+            <string>Cubic_11</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_PTCG_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-0W-3Ga" userLabel="Main Stack View">
+                                <rect key="frame" x="59" y="0.0" width="734" height="396.33333333333331"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onq-6T-4TY" userLabel="The Timer View">
+                                        <rect key="frame" x="0.0" y="0.0" width="734" height="244.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="247" text="35:00" textAlignment="center" lineBreakMode="middleTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5V8-gD-8LO">
+                                                <rect key="frame" x="0.0" y="0.0" width="734" height="244.33333333333334"/>
+                                                <fontDescription key="fontDescription" name="Cubic_11" family="Cubic 11" pointSize="240"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5V8-gD-8LO" secondAttribute="trailing" id="Diz-Zn-YmT"/>
+                                            <constraint firstItem="5V8-gD-8LO" firstAttribute="top" secondItem="Onq-6T-4TY" secondAttribute="top" id="NFu-bB-aOJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="5V8-gD-8LO" secondAttribute="bottom" id="q2U-Sc-se0"/>
+                                            <constraint firstItem="5V8-gD-8LO" firstAttribute="leading" secondItem="Onq-6T-4TY" secondAttribute="leading" id="s9O-rE-2fE"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="TRz-Ug-ol3" userLabel="Action View">
+                                        <rect key="frame" x="0.0" y="255.33333333333334" width="734" height="95.6666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-lA-Hae">
+                                                <rect key="frame" x="0.0" y="0.0" width="188.33333333333334" height="95.666666666666671"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="撤退">
+                                                    <fontDescription key="titleFontDescription" name="Cubic_11" family="Cubic 11" pointSize="70"/>
+                                                    <color key="baseForegroundColor" red="0.81568627449999997" green="0.18039215689999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="retreatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="23d-rl-kyc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKs-gb-8Lz" userLabel="支援者">
+                                                <rect key="frame" x="241.33333333333331" y="6.9999999999999716" width="244" height="81.666666666666671"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="支援者">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0"/>
+                                                    <fontDescription key="titleFontDescription" name="Cubic_11" family="Cubic 11" pointSize="70"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                    <color key="baseForegroundColor" red="0.81568627450980391" green="0.1803921568627451" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="supporterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRy-6f-EFm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-3P-y8B" userLabel="能量">
+                                                <rect key="frame" x="538.33333333333337" y="0.0" width="195.66666666666663" height="95.666666666666671"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="能量">
+                                                    <fontDescription key="titleFontDescription" name="Cubic_11" family="Cubic 11" pointSize="70"/>
+                                                    <color key="baseForegroundColor" red="0.81568627449999997" green="0.18039215689999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="energyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89h-JD-4UZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NfR-lA-Hae" firstAttribute="leading" secondItem="TRz-Ug-ol3" secondAttribute="leading" id="onK-B3-WZO"/>
+                                            <constraint firstAttribute="bottom" secondItem="NfR-lA-Hae" secondAttribute="bottom" id="r5Z-sb-Nrf"/>
+                                            <constraint firstItem="NfR-lA-Hae" firstAttribute="top" secondItem="TRz-Ug-ol3" secondAttribute="top" id="yAW-pi-ehU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5f9-7R-Oxz" userLabel="Button Menu">
+                                        <rect key="frame" x="0.0" y="362" width="734" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl0-lL-XBC" userLabel="Play Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wfu-k5-ITM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02t-oM-Fi3" userLabel="Pause Button">
+                                                <rect key="frame" x="183.66666666666663" y="0.0" width="183.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Oz-pd-d7u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUN-3B-y3G" userLabel="Round End Button">
+                                                <rect key="frame" x="367" y="0.0" width="183.66666666666663" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="point.forward.to.point.capsulepath" catalog="system">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetActionsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFZ-00-wHH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pJ-wO-gYy" userLabel="Round End Button">
+                                                <rect key="frame" x="550.66666666666663" y="0.0" width="183.33333333333337" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetActionsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0t-VS-oK2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZA-0W-3Ga" secondAttribute="trailing" id="21f-66-dW3"/>
+                            <constraint firstItem="qZA-0W-3Ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eK6-0F-UFj"/>
+                            <constraint firstItem="qZA-0W-3Ga" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qxw-6j-yEN"/>
+                            <constraint firstItem="qZA-0W-3Ga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rj4-RQ-Af4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qZA-0W-3Ga" secondAttribute="bottom" constant="-24.333333333333314" id="xMf-j6-Ida"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="energyButton" destination="ZS9-3P-y8B" id="BbC-dc-2rK"/>
+                        <outlet property="pauseBtn" destination="02t-oM-Fi3" id="KXW-ny-tqL"/>
+                        <outlet property="resetActionsButton" destination="zUN-3B-y3G" id="bsW-eB-S7R"/>
+                        <outlet property="retreatButton" destination="NfR-lA-Hae" id="6XE-Xi-JMf"/>
+                        <outlet property="startBtn" destination="Vl0-lL-XBC" id="DU8-jv-stw"/>
+                        <outlet property="supporterButton" destination="JKs-gb-8Lz" id="frh-PS-h4i"/>
+                        <outlet property="theTimer" destination="5V8-gD-8LO" id="ubr-eA-ZLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.394366197183103" y="-28.244274809160306"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="point.forward.to.point.capsulepath" catalog="system" width="128" height="81"/>
+    </resources>
 </document>
